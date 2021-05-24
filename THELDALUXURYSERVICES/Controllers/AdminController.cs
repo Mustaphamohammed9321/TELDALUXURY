@@ -13,5 +13,11 @@ namespace THELDALUXURYECOMMERCE.Controllers
         {
             return View();
         }
+        
+        //Admin Index Page
+        public IActionResult Login()
+        {
+            return View();
+        }
     }
 }

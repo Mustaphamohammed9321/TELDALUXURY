@@ -1764,4 +1764,8 @@
     <None Include="wwwroot\Admin\vendors\x-editable\bootstrap-editable.min.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
 </Project>
