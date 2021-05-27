@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "TheldaLuxury Administrator ";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    var projTime = DateTime.Today.ToLongDateString();
+    var projTime = DateTime.Now.ToString("dddd, dd MMMM yyyy");
 }
 
 <!-- partial -->
@@ -322,7 +322,7 @@
                                     </div>
                                     <div class="ml-2">
                                         <h4 class="location font-weight-normal">Bangalore</h4>
-                                        <h6 class="font-weight-normal">India</h6>
+                                        <h6 class="font-weight-normal">India</h6> @*This should get the temperature of a country and show it on the table*@
                                     </div>
                                 </div>
                             </div>

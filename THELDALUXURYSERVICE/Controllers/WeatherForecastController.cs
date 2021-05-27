@@ -35,5 +35,12 @@ namespace THELDALUXURYSERVICE.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost]
+        private IEnumerable<WeatherForecast> GetUsersById()
+        {
+            return GetUsersById();
+        }
+
     }
 }
