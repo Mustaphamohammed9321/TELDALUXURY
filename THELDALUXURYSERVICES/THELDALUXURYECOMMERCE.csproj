@@ -1762,6 +1762,109 @@
     <None Include="wwwroot\Admin\vendors\typeahead.js\typeahead.bundle.min.js" />
     <None Include="wwwroot\Admin\vendors\x-editable\bootstrap-editable.css" />
     <None Include="wwwroot\Admin\vendors\x-editable\bootstrap-editable.min.js" />
+    <None Include="wwwroot\Home\css\bootstrap.css" />
+    <None Include="wwwroot\Home\css\easy-responsive-tabs.css" />
+    <None Include="wwwroot\Home\css\flexslider.css" />
+    <None Include="wwwroot\Home\css\font-awesome.css" />
+    <None Include="wwwroot\Home\css\jquery-ui.css" />
+    <None Include="wwwroot\Home\css\style.css" />
+    <None Include="wwwroot\Home\css\team.css" />
+    <None Include="wwwroot\Home\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\Home\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Home\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\Home\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\Home\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Home\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\Home\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\Home\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\Home\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\Home\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\Home\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\Home\images\1.png" />
+    <None Include="wwwroot\Home\images\2.png" />
+    <None Include="wwwroot\Home\images\ab_pic.jpg" />
+    <None Include="wwwroot\Home\images\arrow.png" />
+    <None Include="wwwroot\Home\images\b1.jpg" />
+    <None Include="wwwroot\Home\images\b2.jpg" />
+    <None Include="wwwroot\Home\images\b3.jpg" />
+    <None Include="wwwroot\Home\images\b4.jpg" />
+    <None Include="wwwroot\Home\images\b5.jpg" />
+    <None Include="wwwroot\Home\images\b6.jpg" />
+    <None Include="wwwroot\Home\images\b7.jpg" />
+    <None Include="wwwroot\Home\images\b8.jpg" />
+    <None Include="wwwroot\Home\images\banner1.jpg" />
+    <None Include="wwwroot\Home\images\banner2.jpg" />
+    <None Include="wwwroot\Home\images\banner3.jpg" />
+    <None Include="wwwroot\Home\images\banner4.jpg" />
+    <None Include="wwwroot\Home\images\banner5.jpg" />
+    <None Include="wwwroot\Home\images\bb1.jpg" />
+    <None Include="wwwroot\Home\images\bb2.jpg" />
+    <None Include="wwwroot\Home\images\bottom1.jpg" />
+    <None Include="wwwroot\Home\images\bottom2.jpg" />
+    <None Include="wwwroot\Home\images\bottom3.jpg" />
+    <None Include="wwwroot\Home\images\bottom4.jpg" />
+    <None Include="wwwroot\Home\images\bot_1.jpg" />
+    <None Include="wwwroot\Home\images\bot_2.jpg" />
+    <None Include="wwwroot\Home\images\btn_next.png" />
+    <None Include="wwwroot\Home\images\btn_pause.png" />
+    <None Include="wwwroot\Home\images\btn_play.png" />
+    <None Include="wwwroot\Home\images\btn_prev.png" />
+    <None Include="wwwroot\Home\images\close_1.png" />
+    <None Include="wwwroot\Home\images\d1.jpg" />
+    <None Include="wwwroot\Home\images\d2.jpg" />
+    <None Include="wwwroot\Home\images\d3.jpg" />
+    <None Include="wwwroot\Home\images\inner1.jpg" />
+    <None Include="wwwroot\Home\images\inner2.jpg" />
+    <None Include="wwwroot\Home\images\log_pic.jpg" />
+    <None Include="wwwroot\Home\images\m1.jpg" />
+    <None Include="wwwroot\Home\images\m2.jpg" />
+    <None Include="wwwroot\Home\images\m3.jpg" />
+    <None Include="wwwroot\Home\images\m4.jpg" />
+    <None Include="wwwroot\Home\images\m5.jpg" />
+    <None Include="wwwroot\Home\images\m6.jpg" />
+    <None Include="wwwroot\Home\images\m7.jpg" />
+    <None Include="wwwroot\Home\images\m8.jpg" />
+    <None Include="wwwroot\Home\images\mark1.png" />
+    <None Include="wwwroot\Home\images\mid.jpg" />
+    <None Include="wwwroot\Home\images\s1.jpg" />
+    <None Include="wwwroot\Home\images\s2.jpg" />
+    <None Include="wwwroot\Home\images\s3.jpg" />
+    <None Include="wwwroot\Home\images\s4.jpg" />
+    <None Include="wwwroot\Home\images\s5.jpg" />
+    <None Include="wwwroot\Home\images\s6.jpg" />
+    <None Include="wwwroot\Home\images\s7.jpg" />
+    <None Include="wwwroot\Home\images\s8.jpeg" />
+    <None Include="wwwroot\Home\images\s8.jpg" />
+    <None Include="wwwroot\Home\images\search.png" />
+    <None Include="wwwroot\Home\images\t1.jpg" />
+    <None Include="wwwroot\Home\images\t2.jpg" />
+    <None Include="wwwroot\Home\images\t3.jpg" />
+    <None Include="wwwroot\Home\images\t4.jpg" />
+    <None Include="wwwroot\Home\images\tick-mark1.png" />
+    <None Include="wwwroot\Home\images\top1.jpg" />
+    <None Include="wwwroot\Home\images\top2.jpg" />
+    <None Include="wwwroot\Home\images\up_arrow.png" />
+    <None Include="wwwroot\Home\images\w1.jpg" />
+    <None Include="wwwroot\Home\images\w2.jpg" />
+    <None Include="wwwroot\Home\images\w3.jpg" />
+    <None Include="wwwroot\Home\images\w4.jpg" />
+    <None Include="wwwroot\Home\images\w5.jpg" />
+    <None Include="wwwroot\Home\images\w6.jpg" />
+    <None Include="wwwroot\Home\images\w7.jpg" />
+    <None Include="wwwroot\Home\images\w8.jpg" />
+    <None Include="wwwroot\Home\js\bootstrap.js" />
+    <None Include="wwwroot\Home\js\easy-responsive-tabs.js" />
+    <None Include="wwwroot\Home\js\imagezoom.js" />
+    <None Include="wwwroot\Home\js\jquery-2.1.4.min.js" />
+    <None Include="wwwroot\Home\js\jquery-ui.js" />
+    <None Include="wwwroot\Home\js\jquery.countup.js" />
+    <None Include="wwwroot\Home\js\jquery.easing.min.js" />
+    <None Include="wwwroot\Home\js\jquery.flexslider.js" />
+    <None Include="wwwroot\Home\js\jquery.waypoints.min.js" />
+    <None Include="wwwroot\Home\js\minicart.min.js" />
+    <None Include="wwwroot\Home\js\modernizr.custom.js" />
+    <None Include="wwwroot\Home\js\move-top.js" />
+    <None Include="wwwroot\Home\js\responsiveslides.min.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -1772,6 +1875,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="WebAPIClient" Version="1.0.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WEBAPI\WEBAPI.csproj" />
   </ItemGroup>
 
 </Project>

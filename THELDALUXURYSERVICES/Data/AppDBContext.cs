@@ -13,8 +13,8 @@ namespace THELDALUXURYECOMMERCE.Data
         {
 
         }
-        public DbSet<State> states { get; set; }
-        public DbSet<AdminUser> adminusers { get; set; } 
+        public DbSet<tb_State> states { get; set; }
+        public DbSet<AdminUserModel> adminusers { get; set; } 
 
     }
 }

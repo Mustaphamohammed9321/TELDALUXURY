@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using THELDALUXURYECOMMERCE.Models;
 
 namespace THELDALUXURYSERVICE.Repository
 {
@@ -11,10 +13,11 @@ namespace THELDALUXURYSERVICE.Repository
     {
         private IDbConnection dbConnection;
 
-        public AdminUserRepository(IConfiguration configuration)
-        {
-
-        }
+        //public AdminUserRepository(IConfiguration configuration)
+        //{
+        //    this.dbConnection = new SqlConnection(configuration.GetConnectionString("ConnectionName")) ;
+        //}       
+      
 
     }
 }

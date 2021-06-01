@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using THELDALUXURYSERVICES.Controllers;
+using THELDALUXURYECOMMERCE.Models;
+using System.Net.Http;
 
 namespace THELDALUXURYECOMMERCE.Controllers
 {
@@ -19,10 +21,13 @@ namespace THELDALUXURYECOMMERCE.Controllers
 
 
         //Admin Index Page
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+            //IEnumerable<mvcAdminUser> adminuserlist;
+            //HttpResponseMessage response = GlobalVariables.GetAsync("AdminUser").Result;
+            //adminuserlist = response.Content.ReadAsStringAsync<IEnumerable<mvcAdminUser>>().Result;
+            //return View(adminuserlist);
+        //}
         
         //Admin Index Page
         public IActionResult Login()
