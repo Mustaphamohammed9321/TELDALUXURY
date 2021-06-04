@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,24 +16,32 @@ using THELDALUXURYECOMMERCE.Data;
 using Microsoft.EntityFrameworkCore;
 using THELDALUXURYSERVICE.Repository;
 using THELDALUXURYECOMMERCE.Models;
+using System.Data.SqlClient;
 
 namespace THELDALUXURYSERVICE
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; private set; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           // services.AddDbContext<AppDBContext>(opt =>
-           //opt.UseSqlServer(Configuration.GetConnectionString("ConnectionName")));
-            
+            //i used this code block to create a connection string for the Dapper API i added to this project 
+            services.AddTransient<IDbConnection>((sp) =>
+               new SqlConnection(this.Configuration.GetConnectionString("connectionName"))
+           );
+
+            //i used this code block to create a connection string for the EF API i added to this project 
+            services.AddDbContext<AppDBContext>(opt =>
+           opt.UseSqlServer(Configuration.GetConnectionString("connectionName")));
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

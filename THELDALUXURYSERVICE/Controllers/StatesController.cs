@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,9 +17,9 @@ namespace THELDALUXURYSERVICE.Controllers
     public class StatesController : ControllerBase
     {
         private readonly StateRepository stateRepo;
-        public StatesController(IConfiguration _configuration)
+        public StatesController(IDbConnection _DBCONNECTION)
         {
-            stateRepo = new StateRepository();
+            stateRepo = new StateRepository(_DBCONNECTION);
         }
         
         // GET: api/<StatesController>
@@ -57,6 +58,7 @@ namespace THELDALUXURYSERVICE.Controllers
         public void Delete(int id)
         {
             stateRepo.Delete(id);
+            Response.StatusCode = 200;
         }
     }
 }

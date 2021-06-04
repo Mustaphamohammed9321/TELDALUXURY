@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using THELDALUXURYECOMMERCE.Data;
+using THELDALUXURYECOMMERCE.Models;
 
 namespace THELDALUXURYSERVICES
 {
@@ -21,6 +22,7 @@ namespace THELDALUXURYSERVICES
         public void ConfigureServices(IServiceCollection services)
         {
            services.AddControllersWithViews();
+            //services.Configure<ConnectionString>(Configuration.GetSection("ConnectionStrings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

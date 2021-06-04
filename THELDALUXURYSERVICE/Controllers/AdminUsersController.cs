@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using THELDALUXURYECOMMERCE.Models;
 using THELDALUXURYECOMMERCE.Data;
 using THELDALUXURYSERVICE.Repository;
+using System.Data;
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace THELDALUXURYSERVICE.Controllers
@@ -14,40 +16,43 @@ namespace THELDALUXURYSERVICE.Controllers
     [ApiController]
     public class AdminUsersController : ControllerBase
     {
+        private readonly AdminUserRepository adminuserRepo;
 
-        //private readonly iAdminUserRepository _adminuserrepo;
+        public AdminUsersController(IDbConnection _DBCONNECTION)
+        {
+            adminuserRepo = new AdminUserRepository(_DBCONNECTION);
+        }
 
-    //constructor for the class AdminUsersController
-        //public AdminUsersController(iAdminUserRepository adminuserrepo)
-        //{
-        //    _adminuserrepo = adminuserrepo;
-        //}
 
         // GET: api/<AdminUsersController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<tb_AdminUser> Get()
         {
-            return new string[] { "value1", "value2" };
+            return adminuserRepo.GetAll();
         }
 
         // GET api/<AdminUsersController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public tb_AdminUser Get(int id)
         {
-            return "value";
+            return adminuserRepo.GetAllById(id);
         }
 
         // POST api/<AdminUsersController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] tb_AdminUser adminuser)
         {
-
+            if (ModelState.IsValid)
+                adminuserRepo.Add(adminuser);
         }
 
         // PUT api/<AdminUsersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] tb_AdminUser adminuser)
         {
+            adminuser.AdminId = id;
+            if (ModelState.IsValid)
+                adminuserRepo.Update(adminuser);
         }
 
         // DELETE api/<AdminUsersController>/5
@@ -55,7 +60,20 @@ namespace THELDALUXURYSERVICE.Controllers
         [ValidateAntiForgeryToken]
         public void Delete(int id)
         {
-           
+            tb_AdminUser ADMINUSER = new tb_AdminUser();
+            var aUser = ADMINUSER.AdminId;
+
+            if (id == aUser)
+            {
+                try
+                {
+                    adminuserRepo.Delete(id);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
         }
     }
 }

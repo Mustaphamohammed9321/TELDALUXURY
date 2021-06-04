@@ -14,7 +14,7 @@ namespace THELDALUXURYECOMMERCE.Data
 
         }
         public DbSet<tb_State> states { get; set; }
-        public DbSet<AdminUserModel> adminusers { get; set; } 
+        public DbSet<tb_AdminUser> adminusers { get; set; } 
 
     }
 }

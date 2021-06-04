@@ -8,7 +8,7 @@ namespace THELDALUXURYECOMMERCE.Models
     public class CombinedModels
     {
         public IEnumerable<AdminRoleModel> adminrolemodel { get; set; }
-        public IEnumerable<AdminUserModel> adminusermodel { get; set; }
+        public IEnumerable<tb_AdminUser> adminusermodel { get; set; }
         public IEnumerable<CountryModel> countrymodel { get; set; }
         public IEnumerable<ErrorLogModel> errorlogmodel { get; set; }
         public IEnumerable<ItemCategoryModel> itemcategorymodel { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace THELDALUXURYECOMMERCE.Models
 {
-    public class AdminUserModel
+    public class tb_AdminUser
     {
         public int AdminId { get; set; }
 
