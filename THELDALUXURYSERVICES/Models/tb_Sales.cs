@@ -12,5 +12,6 @@ namespace THELDALUXURYECOMMERCE.Models
         public Nullable<int> ItemId { get; set; }
         public Nullable<int> StatusId { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
+        public string Description { get; set; }
     }
 }

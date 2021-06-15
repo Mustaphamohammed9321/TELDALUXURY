@@ -19,6 +19,27 @@ namespace THELDALUXURYSERVICE.Repository
             //conString = @"Data Source = SOLDIERBOY\MSSQLMUSTY; Initial Catalog = theldaluxury; Integrated Security = True";
         }
 
+        //public tb_AdminUser AdminLogin(string username ="", string password="")
+        //{
+        //    using (_DBCONNECTION)
+        //    {
+        //        string sQuery = @"SELECT COUNT(*) FROM tb_AdminUser WHERE UserName = @username and Password = @password";
+        //        _DBCONNECTION.Open();
+        //        return _DBCONNECTION.Query<tb_AdminUser>(sQuery, new { uName = username, Pwd = password }).FirstOrDefault();
+        //    }
+        //}
+
+        //public void CreateAccount(tb_AdminUser adminUser)
+        //{
+
+        //    using (_DBCONNECTION)
+        //    {
+        //        string sQuery = @"INSERT INTO tb_AdminUser (FirstName,LastName,EmailAddress,UserName,Password,RoleId) VALUES(@FirstName, @LastName, @EmailAddress, @UserName, @Password, @RoleId)";
+        //        _DBCONNECTION.Open();
+        //        _DBCONNECTION.Execute(sQuery, adminUser);
+        //    }
+        //}
+
         public void Add(tb_AdminUser adminUser)
         {
 
@@ -28,7 +49,10 @@ namespace THELDALUXURYSERVICE.Repository
                 _DBCONNECTION.Open();
                 _DBCONNECTION.Execute(sQuery, adminUser);
             }
-        }
+        } 
+        
+            
+
 
         public IEnumerable<tb_AdminUser> GetAll()
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
-using WEBAPI.Models;
+using THELDALUXURYECOMMERCE.Models;
 using Dapper;
 
 namespace THELDALUXURYSERVICE.Repository
@@ -36,10 +36,9 @@ namespace THELDALUXURYSERVICE.Repository
                 _DBCONNECTION.Open();
                 tb_AdminRole adrole = new tb_AdminRole();
                 return _DBCONNECTION.Query<tb_AdminRole>(sQuery);
-                
+
             }
         }
-
         public tb_AdminRole GetAllById(int id)
         {
             using (_DBCONNECTION)
@@ -49,7 +48,6 @@ namespace THELDALUXURYSERVICE.Repository
                 return _DBCONNECTION.Query<tb_AdminRole>(sQuery, new { Id = id }).FirstOrDefault();
             }
         }
-
         public void Delete(int id)
         {
             using (_DBCONNECTION)
@@ -59,7 +57,6 @@ namespace THELDALUXURYSERVICE.Repository
                 _DBCONNECTION.Execute(sQuery, new { Id = id });
             }
         }
-
         public void Update(tb_AdminRole adminrole)
         {
             using (_DBCONNECTION)
@@ -69,6 +66,5 @@ namespace THELDALUXURYSERVICE.Repository
                 _DBCONNECTION.Execute(sQuery, adminrole);
             }
         }
-
     }
 }

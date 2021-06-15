@@ -8,6 +8,9 @@ namespace THELDALUXURYECOMMERCE.Models
 {
     public class tb_AdminUser
     {
+
+        public string SigninErrorMessage { get;set;}
+
         public int AdminId { get; set; }
 
         [Required(ErrorMessage="This field is required")]
@@ -31,7 +34,7 @@ namespace THELDALUXURYECOMMERCE.Models
         
         [Required(ErrorMessage = "This field is required")]
         [DataType(DataType.Password)]
-        public string Password { get; init; }
+        public string Password { get; set; }
 
         public string  Photo { get; set; }
         

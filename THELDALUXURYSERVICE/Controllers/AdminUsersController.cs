@@ -7,6 +7,8 @@ using THELDALUXURYECOMMERCE.Models;
 using THELDALUXURYECOMMERCE.Data;
 using THELDALUXURYSERVICE.Repository;
 using System.Data;
+using System.Data.Common;
+//using WEBAPI.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,6 +24,56 @@ namespace THELDALUXURYSERVICE.Controllers
         {
             adminuserRepo = new AdminUserRepository(_DBCONNECTION);
         }
+
+        //admin Sign Up
+        // POST api/<AdminUsersController>
+        //[HttpPost]
+        //public ActionResult CreateAdmin(tb_AdminUser adminuser)
+        //{
+            //using (AppDBContext db = new AppDBContext())
+            //{
+            //    var AdminDetails = db.adminusers.Where(x => x.UserName == adminuser.UserName && x.Password == adminuser.Password).FirstOrDefault();
+            //    if (AdminDetails == null)
+            //    {
+            //        adminuser.SigninErrorMessage = "Oops! You submitted an incorrect login details.";
+            //        return RedirectToAction("Index", adminuser);
+            //    }
+            //    else
+            //    {
+            //        //Session["ID"] = userModel.ID;
+            //        //Session["email"] = userModel.email;
+            //        return RedirectToAction("AdminPage", "Signin");
+            //    }
+            //}
+
+            //try
+            //{
+            //    tb_AdminUser aU = new tb_AdminUser();
+            //    if (aU.AdminId == 0 && ModelState.IsValid) 
+            //    {
+            //        aU.FirstName = adminuser.FirstName;
+            //        aU.LastName = adminuser.LastName;
+            //        aU.EmailAddress = adminuser.EmailAddress;
+            //        aU.UserName = adminuser.UserName;
+            //        aU.Password = adminuser.Password;
+            //        aU.RoleId = adminuser.RoleId;
+            //        adminuserRepo.CreateAccount(adminuser);
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
+        //}
+
+        
+        //Sign in for admin
+        // GET api/<AdminUsersController>/5
+        //[HttpGet("{UserName}/{Password}")]
+        //public tb_AdminUser SignInAdmin(string username, string password)
+        //{
+        //    return adminuserRepo.AdminLogin(username,password);
+        //}
 
 
         // GET: api/<AdminUsersController>

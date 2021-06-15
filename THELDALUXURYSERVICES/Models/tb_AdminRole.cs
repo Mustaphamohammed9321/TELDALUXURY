@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace THELDALUXURYECOMMERCE.Models
 {
-    public class AdminRoleModel
+    public class tb_AdminRole
     {
         public int RoleId { get; set; }
         public string Role { get; set; }
