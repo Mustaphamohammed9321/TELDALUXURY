@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Content\" />
+    <Folder Include="wwwroot\sweetalert\" />
   </ItemGroup>
 
   <ItemGroup>

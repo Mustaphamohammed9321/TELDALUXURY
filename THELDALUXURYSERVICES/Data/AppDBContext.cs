@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using THELDALUXURYECOMMERCE.Models;
+using WEBAPI.Models;
 
 namespace THELDALUXURYECOMMERCE.Data
 {
