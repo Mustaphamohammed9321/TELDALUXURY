@@ -249,6 +249,7 @@
       <LastGenOutput>teldaluxuryMODEL.Context.cs</LastGenOutput>
       <DependentUpon>teldaluxuryMODEL.edmx</DependentUpon>
     </Content>
+    <Content Include="Models\teldaluxuryMODEL.edmx.sql" />
     <Content Include="Models\teldaluxuryMODEL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>teldaluxuryMODEL.edmx</DependentUpon>

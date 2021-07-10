@@ -9,6 +9,7 @@ using THELDALUXURYECOMMERCE.Models;
 using System.Net.Http;
 using WEBAPI.Models;
 using THELDALUXURYECOMMERCE.Response;
+//using Dapper;
 
 namespace THELDALUXURYECOMMERCE.Controllers
 {
@@ -47,7 +48,7 @@ namespace THELDALUXURYECOMMERCE.Controllers
                 var userDetails = db.tb_Users.Where(x => x.EmailAddress == user.EmailAddress && x.Password == user.Password).FirstOrDefault();
                 if (userDetails == null)
                 {
-                    user.SigninErrorMessage = "Oops! You submitted an incorrect login details.";
+                    //user.SigninErrorMessage = "Oops! You submitted an incorrect login details.";
                     return View("Index", user);
                 }
                 else

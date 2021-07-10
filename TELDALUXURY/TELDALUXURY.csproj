@@ -1974,9 +1974,9 @@
       <Project>{f5d7b8d0-d688-4a1a-a28a-740aab8538f6}</Project>
       <Name>TELDAMIN</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WEBAPI\WEBAPI.csproj">
+    <ProjectReference Include="..\WEBAPI\WEBAPImodel.csproj">
       <Project>{84db4bdc-f5bb-424e-8621-6e512515e172}</Project>
-      <Name>WEBAPI</Name>
+      <Name>WEBAPImodel</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
