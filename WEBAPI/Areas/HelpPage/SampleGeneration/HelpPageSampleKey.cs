@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net.Http.Headers;
 
-namespace WEBAPI.Areas.HelpPage
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage
 {
     /// <summary>
     /// This is used to identify the place where the sample should be applied.

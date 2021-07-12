@@ -1,6 +1,6 @@
 using System;
 
-namespace WEBAPI.Areas.HelpPage.ModelDescriptions
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

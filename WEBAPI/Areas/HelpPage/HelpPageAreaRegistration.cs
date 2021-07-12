@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace WEBAPI.Areas.HelpPage
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using WEBAPI.Areas.HelpPage.ModelDescriptions;
-using WEBAPI.Areas.HelpPage.Models;
+using DAPPER_WEBAPI_TELDA.Areas.HelpPage.ModelDescriptions;
+using DAPPER_WEBAPI_TELDA.Areas.HelpPage.Models;
 
-namespace WEBAPI.Areas.HelpPage
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

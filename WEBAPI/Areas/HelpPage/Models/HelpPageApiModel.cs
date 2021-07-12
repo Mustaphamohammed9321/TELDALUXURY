@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using WEBAPI.Areas.HelpPage.ModelDescriptions;
+using DAPPER_WEBAPI_TELDA.Areas.HelpPage.ModelDescriptions;
 
-namespace WEBAPI.Areas.HelpPage.Models
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

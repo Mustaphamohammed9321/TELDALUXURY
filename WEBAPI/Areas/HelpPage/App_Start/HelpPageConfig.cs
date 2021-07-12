@@ -16,7 +16,7 @@ using System.Web.Http;
 using System.Web.Http.OData;
 #endif
 
-namespace WEBAPI.Areas.HelpPage
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage
 {
     /// <summary>
     /// Use this class to customize the Help Page.

@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using WEBAPI.Areas.HelpPage.ModelDescriptions;
-using WEBAPI.Areas.HelpPage.Models;
+using DAPPER_WEBAPI_TELDA.Areas.HelpPage.ModelDescriptions;
+using DAPPER_WEBAPI_TELDA.Areas.HelpPage.Models;
 
-namespace WEBAPI.Areas.HelpPage.Controllers
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

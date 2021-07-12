@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace WEBAPI
+namespace DAPPER_WEBAPI_TELDA
 {
     public class BundleConfig
     {

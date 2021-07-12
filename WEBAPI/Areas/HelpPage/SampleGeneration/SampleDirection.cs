@@ -1,4 +1,4 @@
-namespace WEBAPI.Areas.HelpPage
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

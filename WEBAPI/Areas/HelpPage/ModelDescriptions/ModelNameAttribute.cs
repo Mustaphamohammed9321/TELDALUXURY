@@ -1,6 +1,6 @@
 using System;
 
-namespace WEBAPI.Areas.HelpPage.ModelDescriptions
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Use this attribute to change the name of the <see cref="ModelDescription"/> generated for a type.

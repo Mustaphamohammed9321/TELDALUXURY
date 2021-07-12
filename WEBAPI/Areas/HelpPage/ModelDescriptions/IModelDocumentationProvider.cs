@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace WEBAPI.Areas.HelpPage.ModelDescriptions
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

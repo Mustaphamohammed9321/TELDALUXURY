@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace WEBAPI
+namespace DAPPER_WEBAPI_TELDA
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

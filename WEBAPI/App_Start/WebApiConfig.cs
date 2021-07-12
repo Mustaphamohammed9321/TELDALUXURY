@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace WEBAPI
+namespace DAPPER_WEBAPI_TELDA
 {
     public static class WebApiConfig
     {

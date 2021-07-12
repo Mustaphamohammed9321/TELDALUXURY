@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WEBAPI.Models
+namespace DAPPER_WEBAPI_TELDA.Models
 {
     using System;
     using System.Collections.Generic;

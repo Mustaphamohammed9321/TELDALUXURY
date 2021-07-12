@@ -8,9 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using WEBAPI.Models;
+using DAPPER_WEBAPI_TELDA.Models;
 
-namespace WEBAPI.Controllers
+namespace DAPPER_WEBAPI_TELDA.Controllers
 {
     public class tb_UsersController : ApiController
     {

@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace WEBAPI.Areas.HelpPage.ModelDescriptions
+namespace DAPPER_WEBAPI_TELDA.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {
