@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using DAPPER_WEBAPI_TELDA.Repository;
-using WEBAPI.Models;
+using DAPPER_WEBAPI_TELDA.Models;
 
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
@@ -23,7 +23,7 @@ namespace DAPPER_WEBAPI_TELDA.Controllers
         }
 
         //Get: api/Firstname
-        [HttpGet("GetUserName")]
+        [HttpGet("GetUserFirstName")]
         public IEnumerable<GetUserFirstName> GetUserFirstName()
         {
             if (ModelState.IsValid)

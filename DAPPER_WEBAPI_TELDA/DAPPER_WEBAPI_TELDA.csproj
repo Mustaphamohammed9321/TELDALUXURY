@@ -7,12 +7,15 @@
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.90" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0-preview.5.21301.5" />
+    <PackageReference Include="Microsoft.Extensions.WebEncoders" Version="6.0.0-preview.5.21301.17" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TELDALUXURY_WEBSITE\TELDALUXURY_WEBSITE.csproj" />
-    <ProjectReference Include="..\WEBAPI\WEBAPI_MODEL.csproj" />
+    <Folder Include="Views\" />
   </ItemGroup>
 
 </Project>

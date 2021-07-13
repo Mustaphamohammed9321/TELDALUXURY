@@ -8,14 +8,14 @@ using System.Web;
 
 namespace DAPPER_WEBAPI_TELDA
 {
-    public static class Encryption
+    public class Encryption
     {
         // This size of the IV (in bytes) must = (keysize / 8).  Default keysize is 256, so the IV must be
         // 32 bytes long.  Using a 16 character string here gives us 32 bytes when converted to a byte array.
         private const string initVector = "pemgail9uzpgzl88";
         // This constant is used to determine the keysize of the encryption algorithm
         private const int keysize = 256;
-        public static string EncryptString(string plainText, string passPhrase = "te$da%ux@r&")
+        public  string EncryptString(string plainText, string passPhrase = "te$da%ux@r&")
         {
             byte[] initVectorBytes = Encoding.UTF8.GetBytes(initVector);
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
@@ -34,7 +34,7 @@ namespace DAPPER_WEBAPI_TELDA
             return Convert.ToBase64String(cipherTextBytes);
         }
         //Decrypt
-        public static string Decrypt(string cipherText, string passPhrase = "te$da%ux@r&")
+        public string Decrypt(string cipherText, string passPhrase = "te$da%ux@r&")
         {
             byte[] initVectorBytes = Encoding.UTF8.GetBytes(initVector);
             byte[] cipherTextBytes = Convert.FromBase64String(cipherText);

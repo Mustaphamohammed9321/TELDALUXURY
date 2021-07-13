@@ -5,8 +5,8 @@ using System.Web;
 using System.Data;
 using Dapper;
 using Microsoft.Data.SqlClient;
-using TELDALUXURY_WEBSITE.Common;
-using WEBAPI.Models;
+using DAPPER_WEBAPI_TELDA.Common;
+using DAPPER_WEBAPI_TELDA.Models;
 
 
 namespace DAPPER_WEBAPI_TELDA.Repository
@@ -15,6 +15,7 @@ namespace DAPPER_WEBAPI_TELDA.Repository
     {
         private string connectionstring;
         ConnectionString con = new ConnectionString();
+        Encryption crypt = new Encryption();
 
         private List<mvcUsers> _users;
         public UsersRepo()
@@ -77,16 +78,19 @@ namespace DAPPER_WEBAPI_TELDA.Repository
         public void CreateUserAccount(CreateUserLogin userlogin)  //working 
         {
             ResponseMessage resp = new ResponseMessage();
-            mvcUsers user = new mvcUsers();
             int operationType = Convert.ToInt32(OperationType.CreateUserAccount); //change update to stafflogin own 
             //add to check if user already exists with some certain details if user exst, dont add again
             using (dbconnection)
             {
                 DynamicParameters parameters = new DynamicParameters();
-                parameters.Add("@EmailAddress", userlogin.EmailAddress);
-                parameters.Add("@Password", userlogin.Password);
-                // parameters.Add("@PasswordHash", CStafflogin.Password);
                 parameters.Add("@OperationType", operationType);
+
+                parameters.Add("@FirstName", userlogin.FirstName);
+                parameters.Add("@LastName", userlogin.LastName);
+                parameters.Add("@OtherName", userlogin.OtherName);
+                parameters.Add("@EmailAddress", userlogin.EmailAddress);
+                parameters.Add("@Password", crypt.EncryptString(userlogin.Password));
+                parameters.Add("@PhoneNumber", userlogin.PhoneNumber);
                 if (dbconnection.State == ConnectionState.Closed)
                     dbconnection.Open();
                 var slogin = dbconnection.Query<CreateUserLogin>("SP_USERS", parameters, commandType: CommandType.StoredProcedure);

@@ -2,6 +2,27 @@
 @{
     var projTime = DateTime.Now.ToString("dddd, dd MMMM yyyy");
 
+
+    //IEnumerable<mvcUsers> slogin = null;
+
+    //        HttpClient hc = new HttpClient();
+    //        hc.BaseAddress = new Uri("https://localhost:44373/api/");   //load the API url here
+    //        //hc.BaseAddress = new Uri("https://localhost:62162/api/");   //load the API url here
+    //        var consume = hc.GetAsync("Users/GetUserFirstName"); //add the controller name here
+    //        consume.Wait();
+
+    //        var readdata = consume.Result;
+    //        if (readdata.IsSuccessStatusCode)
+    //        {
+    //            var disResult = readdata.Content.ReadAsAsync<IList<mvcUsers>>();
+    //            disResult.Wait();
+    //            slogin = disResult.Result;
+    //            DropDownList1.DataSource = slogin;
+    //            DropDownList1.DataTextField = "Users/GetUserFirstName";
+    //            DropDownList1.DataBind();
+
+
+
     if (Session["Id"] == null && Session["EmailAddress"] == null && Session["FirstName"] == null)
     {
         Response.Redirect("~/Users/Login");
