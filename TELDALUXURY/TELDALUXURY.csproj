@@ -343,23 +343,23 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalVariables.cs" />
-    <Compile Include="Model\CreateUserLogin.cs" />
-    <Compile Include="Model\GetUserFirstName.cs" />
-    <Compile Include="Model\AddNewItem.cs" />
-    <Compile Include="Model\mvcAdminRole.cs" />
-    <Compile Include="Model\mvcAdminUser.cs" />
-    <Compile Include="Model\mvcCountry.cs" />
-    <Compile Include="Model\mvcErrorLog.cs" />
-    <Compile Include="Model\mvcItem.cs" />
-    <Compile Include="Model\mvcItemCategory.cs" />
-    <Compile Include="Model\mvcItemStatus.cs" />
-    <Compile Include="Model\mvcLGA.cs" />
-    <Compile Include="Model\mvcSales.cs" />
-    <Compile Include="Model\mvcState.cs" />
-    <Compile Include="Model\mvcUsers.cs" />
-    <Compile Include="Model\Staff.cs" />
-    <Compile Include="Model\StaffLogin.cs" />
-    <Compile Include="Model\UpdateUserAccount.cs" />
+    <Compile Include="Models\CreateUserLogin.cs" />
+    <Compile Include="Models\GetUserFirstName.cs" />
+    <Compile Include="Models\AddNewItem.cs" />
+    <Compile Include="Models\mvcAdminRole.cs" />
+    <Compile Include="Models\mvcAdminUser.cs" />
+    <Compile Include="Models\mvcCountry.cs" />
+    <Compile Include="Models\mvcErrorLog.cs" />
+    <Compile Include="Models\mvcItem.cs" />
+    <Compile Include="Models\mvcItemCategory.cs" />
+    <Compile Include="Models\mvcItemStatus.cs" />
+    <Compile Include="Models\mvcLGA.cs" />
+    <Compile Include="Models\mvcSales.cs" />
+    <Compile Include="Models\mvcState.cs" />
+    <Compile Include="Models\mvcUsers.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\StaffLogin.cs" />
+    <Compile Include="Models\UpdateUserAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\UsersRepo.cs" />
   </ItemGroup>
@@ -2182,6 +2182,7 @@
     <Content Include="Views\User\SignUp.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Shared\_AdminLayoutPage.cshtml" />
+    <Content Include="Views\User\CreateUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
