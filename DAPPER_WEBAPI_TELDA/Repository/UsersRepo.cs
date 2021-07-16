@@ -75,7 +75,13 @@ namespace DAPPER_WEBAPI_TELDA.Repository
             }
         }
 
-        public void CreateUserAccount(CreateUserLogin userlogin)  //working 
+        public mvcUsers UserLogin(string email, string password)
+        {
+            return null;
+        }
+
+
+        public CreateUserLogin CreateUserAccount(CreateUserLogin userlogin)  //working 
         {
             ResponseMessage resp = new ResponseMessage();
             int operationType = Convert.ToInt32(OperationType.CreateUserAccount); //change update to stafflogin own 
@@ -89,11 +95,12 @@ namespace DAPPER_WEBAPI_TELDA.Repository
                 parameters.Add("@LastName", userlogin.LastName);
                 parameters.Add("@OtherName", userlogin.OtherName);
                 parameters.Add("@EmailAddress", userlogin.EmailAddress);
-                parameters.Add("@Password", crypt.EncryptString(userlogin.Password));
+                parameters.Add("@Password", /*crypt.EncryptString(*/userlogin.Password);
                 parameters.Add("@PhoneNumber", userlogin.PhoneNumber);
                 if (dbconnection.State == ConnectionState.Closed)
                     dbconnection.Open();
                 var slogin = dbconnection.Query<CreateUserLogin>("SP_USERS", parameters, commandType: CommandType.StoredProcedure);
+                return userlogin;
             }
         }
 

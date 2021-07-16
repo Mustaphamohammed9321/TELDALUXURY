@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 using TELDALUXURY.Models;
+using Dapper;
 
 namespace TELDALUXURY.Controllers
 {
@@ -12,12 +13,12 @@ namespace TELDALUXURY.Controllers
     {
        public ActionResult CreateUser()
         {
-            return View();
+           return View();
        }
 
 
         [HttpPost]
-        public ActionResult create(mvcUsers userlogin)
+        public ActionResult create(CreateUserLogin userlogin)
         {
 
             using (var client = new HttpClient())
@@ -31,7 +32,7 @@ namespace TELDALUXURY.Controllers
                 var result = postTask.Result;
                 if (result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Login", "User");
                 }
             }
 

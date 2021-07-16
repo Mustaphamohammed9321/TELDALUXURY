@@ -44,7 +44,7 @@ namespace DAPPER_WEBAPI_TELDA.Controllers
         }
 
         // GET: api/Users/5
-        [HttpGet("Userlogin/{id}")]
+        [HttpGet("GetUserById/{id}")]
         public mvcUsers GetUserById(int id)
         {
             return _userepo.GetUserById(id);

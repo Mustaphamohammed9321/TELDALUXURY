@@ -1814,7 +1814,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\Admin\css.zip" />
     <Content Include="Content\Admin\css\maps\vertical-layout-light\style.css.map" />
     <Content Include="Content\Admin\fonts\Manrope\Manrope-Bold.eot" />
     <Content Include="Content\Admin\fonts\Manrope\Manrope-Bold.ttf" />
@@ -2185,6 +2184,7 @@
     <Content Include="Views\User\CreateUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
