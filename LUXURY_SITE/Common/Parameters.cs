@@ -14,7 +14,9 @@ namespace LUXURY_SITE.Common
         GetUserById = 5,
         DeleteUserAccount = 6,   //ie change the account status to isDeleted=1 and StatusId=0
         GetFirstname = 7,
-        UserLogin = 8
+        UserLogin = 8, 
+        GetFirstNameById = 9,
+        VerifyEmailAddress = 10
 
 
         ////operation type for Staff Login

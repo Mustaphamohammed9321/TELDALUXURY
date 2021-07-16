@@ -8,26 +8,41 @@ using System.Web.UI.WebControls;
 using Dapper;
 using LUXURY_SITE.Models;
 using LUXURY_SITE.Repository;
+using System.Data;
+using Microsoft.Data.SqlClient;
+using LUXURY_SITE.Common;
 
 namespace LUXURY_SITE.ADMINTEMPLATE
 {
     public partial class Index : System.Web.UI.Page
     {
         private readonly UsersRepo _userepo;
+        private string connectionstring;
+        ConnectionString con = new ConnectionString();
+
         public Index()
         {
+            connectionstring = con.ConString();
             _userepo = new UsersRepo();
+        }
+
+        public IDbConnection dbconnection
+        {
+            get
+            {
+                return new SqlConnection(connectionstring);
+            }
         }
 
         //Get: api/Firstname
         //[HttpGet("GetUserFirstName")]
-        public IEnumerable<GetUserFirstName> GetUserFirstName()
-        {
-            if (ModelState.IsValid)
-                return _userepo.GetUserNames().ToList();
-            //StatusCode(500, "Could not load data from database");
-            return null;
-        }
+        //public IEnumerable<GetUserFirstName> GetUserFirstName()
+        //{
+        //    if (ModelState.IsValid)
+        //        return _userepo.GetUserFirstName().ToList();
+        //    //StatusCode(500, "Could not load data from database");
+        //    return null;
+        //}
 
 
         // GET: api/Users
@@ -82,7 +97,21 @@ namespace LUXURY_SITE.ADMINTEMPLATE
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["FirstName"] == null)
+            {
+                Response.Redirect("~/login.aspx");
+            }
+
             lblYear.Text = DateTime.UtcNow.Year.ToString();
+            lblFirstname.Text = Session["Firstname"].ToString();
+        }
+
+       
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Session.Clear();  //just clear the sesson and user doesnt need to sign in again
+            Session.Abandon();  //user has to login again
+            Response.Redirect("~/login.aspx");
         }
     }
 }

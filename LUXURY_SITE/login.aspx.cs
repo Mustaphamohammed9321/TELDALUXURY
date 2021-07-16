@@ -14,23 +14,18 @@ using System.Data.SqlClient;
 
 namespace LUXURY_SITE
 {
-
-
     public partial class login : System.Web.UI.Page
     {
-
-        
         private string connectionstring;
 
         ConnectionString con = new ConnectionString();
         Encryption crypt = new Encryption();
 
-
         private readonly UsersRepo _userepo;
         public login()
         {
             connectionstring = con.ConString();
-            //_userepo = new UsersRepo();
+            _userepo = new UsersRepo();
         }
         public IDbConnection dbconnection
         {
@@ -39,38 +34,6 @@ namespace LUXURY_SITE
                 return new SqlConnection(connectionstring);
             }
         }
-
-        public void UserSignIn(string email, string password)
-        {
-            email = txtemail.Text;
-            password = txtpassword.Text;
-
-            int operationtype = Convert.ToInt32(OperationType.UserLogin);
-            try
-            {
-                using (dbconnection)
-                {
-                    DynamicParameters param = new DynamicParameters();
-                    param.Add("@OperationType", operationtype);
-                    param.Add("EmailAddress", email);
-                    param.Add("Password", password);
-                    //var output = dbconnection.Execute("SP_USERS", param, commandType: CommandType.StoredProcedure);
-                    var res = dbconnection.Query<mvcUsers>("SP_USERS", param, commandType: CommandType.StoredProcedure).FirstOrDefault();
-                 
-                    if (res != null)
-                        Response.Redirect("~/Index.aspx");
-                    //lblErrorMsg.Text = "Email or Password incorrect, please try again";
-                    //Response.Write("<script>swal('Good job!', 'You clicked the button!', 'error')</ script>");
-                    Response.Write("<script>alert('Opps! Login Error, please try again')</script>");
-                    //return res;
-                }//end using
-            }//end try
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('Opps! Login Error"+ex.Message.ToString()+", please try again')</script>");
-            }
-        }
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -83,8 +46,22 @@ namespace LUXURY_SITE
 
         protected void SignIn(object sender, EventArgs e)
         {
-            //Login(txtemail.Text, txtpassword.Text);
-            UserSignIn(txtemail.Text, txtpassword.Text);
+           
+            int signinresponse = _userepo.UserSignIn(txtemail.Text, txtpassword.Text);
+
+            switch (signinresponse)
+            {
+                case 0:  //login failed
+                    //Response.Write("<script>alert('Opps! Login Error, please try again')</script>");
+                    lblErrorMsg.Text = "Email or Password incorrect, please try again";
+                    txtemail.Text = txtpassword.Text = "";
+                    break;
+                case 1:  //login success
+                    string firstname = _userepo.GetUserFirstName(txtemail.Text, txtpassword.Text);
+                    Session["FirstName"] = firstname;
+                    Response.Redirect("~/Index.aspx");
+                    break;
+            }
         }
 
         protected void btnsub_Click(object sender, EventArgs e)

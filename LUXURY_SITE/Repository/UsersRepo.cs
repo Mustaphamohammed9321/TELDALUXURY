@@ -29,22 +29,23 @@ namespace LUXURY_SITE.Repository
             }
         }
 
-        public mvcUsers UserSignIn(string email, string password)
+        //User Sign in
+        public int UserSignIn(string email, string password)
         {
             int operationtype = Convert.ToInt32(OperationType.UserLogin);
             using (dbconnection)
             {
                 DynamicParameters param = new DynamicParameters();
                 param.Add("@OperationType", operationtype);
-                param.Add("EmailAddress", email);
-                param.Add("Password", password);
-                var res =  dbconnection.Query<mvcUsers>("SP_USERS", param, commandType: CommandType.StoredProcedure).FirstOrDefault();
+                param.Add("@EmailAddress", email);
+                param.Add("@Password", password);
+                var res = dbconnection.Query<int>("SP_USERS", param, commandType: CommandType.StoredProcedure).Single();
                 return res;
             }
         }
 
 
-        public IEnumerable<GetUserFirstName> GetUserNames()  //get all user details 
+        public IEnumerable<GetUserFirstName> GetAllUserFirstNames()  //get all user details 
         {
             //_users = new List<GetUserFirstName>();
             int operationtype = Convert.ToInt32(OperationType.GetFirstname);
@@ -58,6 +59,23 @@ namespace LUXURY_SITE.Repository
         }
 
 
+        //get user first name
+        public string GetUserFirstName(string EmailAddress, string password)  //working
+        {
+            int operationType = Convert.ToInt32(OperationType.GetFirstNameById);
+            using (dbconnection)
+            {
+                dbconnection.Open();
+                DynamicParameters param = new DynamicParameters();
+                param.Add("@OperationType", operationType);
+                param.Add("@EmailAddress", EmailAddress);
+                param.Add("@Password", password);
+                var res1 = dbconnection.Query<mvcUsers>("SP_USERS", param, commandType: CommandType.StoredProcedure).FirstOrDefault();
+                return res1.FirstName.ToString();
+            }
+        }
+
+        //get all users
         public IEnumerable<mvcUsers> GetUsers()  //get all user details 
         {
             _users = new List<mvcUsers>();
@@ -75,6 +93,8 @@ namespace LUXURY_SITE.Repository
             return _users;
         }
 
+
+        //get users by Id
         public mvcUsers GetUserById(int Id)  //working
         {
             int operationType = Convert.ToInt32(OperationType.GetUserById);
@@ -89,6 +109,7 @@ namespace LUXURY_SITE.Repository
             }
         }
 
+        //create user account (i.e register new account)
         public void CreateUserAccount(CreateUserLogin userlogin)  //working 
         {
             ResponseMessage resp = new ResponseMessage();
@@ -111,6 +132,8 @@ namespace LUXURY_SITE.Repository
             }
         }
 
+
+        //delete user login details
         public void DeleteStaffLoginDetails(int Id) //deleting a login is to make is inaccessible i.e isDeleted = 1
         {
             using (dbconnection)
@@ -126,6 +149,8 @@ namespace LUXURY_SITE.Repository
             }
         }
 
+
+        //update user account
         public void UpdateUserAccount(int id, UpdateUserAccount updateuser)
         {
             int operationType = Convert.ToInt32(OperationType.UpdateUserAccount);
@@ -144,6 +169,8 @@ namespace LUXURY_SITE.Repository
                 dbconnection.Execute("SP_USERS", param, commandType: CommandType.StoredProcedure);
             }
         }
+
+
 
 
     }
